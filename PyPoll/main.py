@@ -1,10 +1,9 @@
+import os
 import sys
 import csv
 
-#TODO: Ask about expectations for setting in/out filenames
-#relative path? or sys.argv?
-pollingcsv = "election_data.csv"
-analysistxt = "polling_analysis.txt"
+pollingcsv = os.path.join("election_data.csv")
+analysistxt = os.path.join("polling_analysis.txt")
 
 with open(pollingcsv, "r", newline="") as csvfile:
     csvreader = csv.reader(csvfile, delimiter=",")
@@ -79,7 +78,3 @@ resultsLog(fileOut, f"-------------------------\nWinner: {winner}\n-------------
 
 #Closes the .txt where results were written   
 fileOut.close() 
-
-#TODO: figure out whether to include following lines based on lessons taught in week 4
-#if __name__ == "__main__":
-#    main()
