@@ -63,7 +63,7 @@ try:
 
 #Provides a descriptive error with instruction for correcting if an error occurs when opening the infile
 except FileNotFoundError:
-    print(f'Please move {pollingcsv} to the same directory as the script.')
+    print(f'Please move {budgetcsv} to the same directory as the script.')
     exit(1)
 
 #Opens and overwrites/creates .txt for results
